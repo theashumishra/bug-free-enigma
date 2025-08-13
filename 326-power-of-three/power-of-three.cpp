@@ -1,9 +1,7 @@
 class Solution {
 public:
     bool isPowerOfThree(int n) {
-       if(n==0) return 0;
-       if(n==1) return 1;
-       if(n%3==0) return isPowerOfThree(n/3);
-       else return 0;
+        if (n <= 0) return false;
+        return 1162261467 % n == 0; // 3^19 = 1162261467
     }
 };
